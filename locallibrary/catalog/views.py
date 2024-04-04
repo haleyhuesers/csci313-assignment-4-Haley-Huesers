@@ -87,7 +87,6 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 
 
 class LoanedBooksAllListView(PermissionRequiredMixin, generic.ListView):
-    """Generic class-based view listing all books on loan. Only visible to users with can_mark_returned permission."""
     model = BookInstance
     permission_required = 'catalog.can_mark_returned'
     template_name = 'catalog/bookinstance_list_borrowed_all.html'

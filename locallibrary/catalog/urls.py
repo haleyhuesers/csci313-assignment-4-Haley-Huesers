@@ -50,3 +50,9 @@ urlpatterns += [
     path('bookinstance/<uuid:pk>/delete/',
          views.BookInstanceDelete.as_view(), name='bookinstance-delete'),
 ]
+
+urlpatterns += [
+    path('authors/', views.AuthorListView.as_view(), name='authors'),
+    path('author/<int:pk>',
+    views.AuthorDetailView.as_view(), name='author-detail'),
+]
